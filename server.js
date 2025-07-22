@@ -5,6 +5,7 @@ dotenv.config();
 import connectDB from './db/connectDB.js';
 import errorHandler from './middlewares/error.middleware.js';
 import serverless from 'serverless-http';
+import cookieParser from 'cookie-parser';
 await connectDB();
 
 const app = express();
@@ -13,17 +14,22 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.use(cors({
     origin: process.env.CLIENT_DEV_URL,
-    methods: ['GET', 'PUT', 'POST', 'DELETE']    
+    methods: ['GET', 'PUT', 'POST', 'DELETE'],
+    credentials: true    
 }))
 
 
 //all routes
-import postsRoutes from './routes/post.route.js';
+import projectRequirementRoutes from './routes/projectrequirement.route.js'
+import authenticationRoutes from "./routes/authentication.route.js";
 
-app.use('/api/posts', postsRoutes);
+app.use('/api/project-requirement', projectRequirementRoutes);
+app.use('/api/auth', authenticationRoutes)
+
 
 //errror handler
 app.use(errorHandler);
