@@ -7,7 +7,6 @@ class ProjectRequirementController {
     
     createProjectRequirement = asyncHandler(async (req,res) => {
         const { name, email, mobileNumber, projectDetails, formLocation } = req.body;
-        // const { name, email, mobileNumber, projectDetails, formLocation } = JSON.parse(req.body);
 
         const newRequirement = new ProjReq({
             name,email,mobileNumber,projectDetails,formLocation
@@ -25,7 +24,6 @@ class ProjectRequirementController {
 
     getProjectRequirement = asyncHandler(async (req,res) => {
         const {tab} = req.query;
-        console.log(req.query);
 
         if (!tab) {
             throw new AppError(400, "Missing 'tab' query parameter.")

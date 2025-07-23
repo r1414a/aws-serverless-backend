@@ -18,10 +18,9 @@ app.use(cookieParser());
 
 app.use(cors({
     origin: process.env.CLIENT_DEV_URL,
-    methods: ['GET', 'PUT', 'POST', 'DELETE'],
+    methods: ['GET', 'PUT', 'POST', 'DELETE','OPTIONS'],
     credentials: true    
 }))
-
 
 //all routes
 import projectRequirementRoutes from './routes/projectrequirement.route.js'
