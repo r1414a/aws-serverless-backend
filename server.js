@@ -5,7 +5,10 @@ dotenv.config();
 import connectDB from './db/connectDB.js';
 import errorHandler from './middlewares/error.middleware.js';
 import serverless from 'serverless-http';
+import authenticationRoutes from "./routes/authentication.route.js";
 import cookieParser from 'cookie-parser';
+import projectRequirementRoutes from './routes/projectrequirement.route.js'
+
 await connectDB();
 
 const app = express();
@@ -22,9 +25,6 @@ app.use(cors({
     credentials: true    
 }))
 
-//all routes
-import projectRequirementRoutes from './routes/projectrequirement.route.js'
-import authenticationRoutes from "./routes/authentication.route.js";
 
 app.use('/api/project-requirement', projectRequirementRoutes);
 app.use('/api/auth', authenticationRoutes)

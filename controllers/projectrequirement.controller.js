@@ -37,7 +37,6 @@ class ProjectRequirementController {
 
     searchProjectRequirement = asyncHandler(async (req,res) => {
         const {tab,from,to} = req.query;
-        console.log(req.query);
 
         if (!tab || !from || !to) {
             throw new AppError(400, "Missing query parameter like tab,from,to.")

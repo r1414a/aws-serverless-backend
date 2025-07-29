@@ -6,7 +6,7 @@ import {validateAdminLogin} from "../middlewares/validators/auth.validation.js";
 import { parseRequestBody } from '../middlewares/parseRequestBody.middleware.js';
 
 router.route('/admin-login').post(
-  parseRequestBody,
+  // parseRequestBody,
   validateAdminLogin,
   validateRequest,
   AuthenticationController.adminLogin);

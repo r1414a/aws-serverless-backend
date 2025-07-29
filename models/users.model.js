@@ -5,12 +5,14 @@ const UserSchema = new mongoose.Schema({
     email: {
         type: String,
         unique: true,
+        trim: true,
         lowercase: true,
         required: true
     },
     password: {
         type: String,
         unique: true,
+        trim: true,
         lowercase: true,
         required: true
     }
@@ -18,14 +20,7 @@ const UserSchema = new mongoose.Schema({
     timestamps: true
 })
 
-UserSchema.methods.isValidPassword = async function(password){
-    try{
-        return await bcrypt.compare(password, this.password);
-    }catch(err){
-        throw new Error('Password comparison failed');
-    }
-}
 
-const User =  mongoose.models.User || mongoose.model('User', UserSchema);
+const User =  mongoose.models.User || mongoose.model('user', UserSchema);
 
 export default User;
