@@ -6,10 +6,12 @@ import {validateAdminLogin} from "../middlewares/validators/auth.validation.js";
 import { parseRequestBody } from '../middlewares/parseRequestBody.middleware.js';
 
 router.route('/admin-login').post(
-  // parseRequestBody,
+  parseRequestBody,
   validateAdminLogin,
   validateRequest,
   AuthenticationController.adminLogin);
 router.route('/check-auth').get(AuthenticationController.checkAuth);
+router.route('/logout').post(AuthenticationController.adminLogout);
+router.route('/delete-proj-req').post(ProjectRequirementController.deleteProjectRequirement)
 
 export default router;

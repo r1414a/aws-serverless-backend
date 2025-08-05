@@ -8,7 +8,7 @@ import { parseRequestBody } from '../middlewares/parseRequestBody.middleware.js'
 
 
 router.route('/save-form-details').post(
-    // parseRequestBody,
+    parseRequestBody,
     validateProjectRequirement,
     validateRequest,
     ProjectRequirementController.createProjectRequirement)

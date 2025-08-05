@@ -58,6 +58,15 @@ class Authentication{
 
         sendResponse(res, 200, {status: true}, "authentication successfull!.")
     })
+
+    adminLogout = asyncHandler(async (req,res) => {
+        res.clearCookie("techinovativ.token",{
+            httpOnly: true,
+            secure: true,
+            sameSite: 'None'
+        })
+        sendResponse(res, 200, {status: false}, "user logged out.")
+    })
 }
 
 const AuthenticationInstance = new Authentication();

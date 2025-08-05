@@ -24,13 +24,15 @@ class ProjectRequirementController {
 
     getProjectRequirement = asyncHandler(async (req,res) => {
         const {tab} = req.query;
+        console.log(tab)
 
         if (!tab) {
             throw new AppError(400, "Missing 'tab' query parameter.")
         }
 
         const data = await ProjReq.find({formLocation: tab}).lean();
-        
+        data.sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt));
+        // console.log("sortedData", sortedData);
         sendResponse(res,200,data, data.length > 0 ? `${tab} page project requirement fetched successfully!.`: `No project Requirement from ${tab} page.`)
      
     })
@@ -48,12 +50,26 @@ class ProjectRequirementController {
                 $gte: new Date(from).setHours(0,0,0,0),
                 $lte: new Date(to).setHours(23,59,0,0)
             }
-        });
+        }).lean();
 
         sendResponse(res, 200 ,data, data.length > 0 ? "Record for specified date fetched successfully!." : "No record found!.")
 
     })
 
+    deleteProjectRequirement = asyncHandler(async (req,res) => {
+        const {deleteData} = req.body;
+        console.log(deleteData);
+        if(deleteData.length === 0){
+            throw new AppError(400, "missing deleteData.")
+        }
+        if(deleteData.length > 1){
+            await ProjReq.deleteMany({_id: { $in: deleteData }});
+        }else{
+            await ProjReq.deleteOne({_id: deleteData[0]});
+        }
+
+        sendResponse(res, 200, {status: true, deleted: `${deleteData.length} records deleted.`});
+    })
 }
 
 const ProjectRequirementInstance = new ProjectRequirementController();
