@@ -14,5 +14,6 @@ router.route('/save-form-details').post(
     ProjectRequirementController.createProjectRequirement)
 router.route('/get-proj-req').get(ProjectRequirementController.getProjectRequirement);
 router.route('/search-proj-req').get(ProjectRequirementController.searchProjectRequirement);
+router.route('/delete-proj-req').post(ProjectRequirementController.deleteProjectRequirement)
 
 export default router;

@@ -12,6 +12,6 @@ router.route('/admin-login').post(
   AuthenticationController.adminLogin);
 router.route('/check-auth').get(AuthenticationController.checkAuth);
 router.route('/logout').post(AuthenticationController.adminLogout);
-router.route('/delete-proj-req').post(ProjectRequirementController.deleteProjectRequirement)
+
 
 export default router;
