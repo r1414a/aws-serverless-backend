@@ -11,5 +11,7 @@ router.route('/admin-login').post(
   validateRequest,
   AuthenticationController.adminLogin);
 router.route('/check-auth').get(AuthenticationController.checkAuth);
+router.route('/logout').post(AuthenticationController.adminLogout);
+
 
 export default router;

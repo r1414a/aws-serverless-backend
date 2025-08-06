@@ -10,17 +10,15 @@ const ProjectReqSchema = new mongoose.Schema({
         type: String,
         trim: true,
         lowercase: true,
-        unique: true,
         required: true
     },
     mobileNumber: {
         type: String,
-        unique:true,
         required: true
     },
     formLocation: {
         type: String,
-        enum: ["Home","WebDev","Contact","Portfolio","Seo"],
+        enum: ["Home","Web-development","Contact-us","Portfolio","Seo","Mobile-app-development"],
         index: true
     },
     projectDetails: {
