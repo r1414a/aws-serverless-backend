@@ -8,6 +8,7 @@ import serverless from 'serverless-http';
 import authenticationRoutes from "./routes/authentication.route.js";
 import cookieParser from 'cookie-parser';
 import projectRequirementRoutes from './routes/projectrequirement.route.js'
+import restoreDataRoutes from "./routes/restoredata.route.js";
 
 await connectDB();
 
@@ -27,7 +28,8 @@ app.use(cors({
 
 
 app.use('/api/project-requirement', projectRequirementRoutes);
-app.use('/api/auth', authenticationRoutes)
+app.use('/api/auth', authenticationRoutes);
+app.use('/api/restore-data', restoreDataRoutes);
 
 
 //errror handler

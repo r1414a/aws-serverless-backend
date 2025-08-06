@@ -2,6 +2,7 @@ import ProjReq from "../models/projectrequirement.model.js"
 import sendResponse from "../utils/sendResponse.js";
 import AppError from "../utils/AppError.js";
 import asyncHandler from "../utils/asyncHandler.js"; 
+import RestoreData from "../models/restoredata.model.js";
 
 class ProjectRequirementController {
     
@@ -58,17 +59,26 @@ class ProjectRequirementController {
 
     deleteProjectRequirement = asyncHandler(async (req,res) => {
         const {deleteData} = req.body;
-        console.log(deleteData);
+        console.log(typeof deleteData, deleteData);
+        let deletedC;
         if(deleteData.length === 0){
-            throw new AppError(400, "missing deleteData.")
-        }
-        if(deleteData.length > 1){
-            await ProjReq.deleteMany({_id: { $in: deleteData }});
-        }else{
-            await ProjReq.deleteOne({_id: deleteData[0]});
+            throw new AppError(400, "missing data to delete.")
         }
 
-        sendResponse(res, 200, {status: true, deleted: `${deleteData.length} records deleted.`});
+        const dataIds = deleteData.map((data) => data._id);
+        console.log(dataIds);
+
+        if(deleteData.length > 1){
+            await RestoreData.insertMany(deleteData);
+            deletedC = await ProjReq.deleteMany({_id: { $in: dataIds }});
+        }else{
+            await RestoreData.insertOne(deleteData[0])
+            deletedC = await ProjReq.deleteOne({_id: dataIds[0]});
+        }
+
+        console.log(deletedC);
+
+        sendResponse(res, 200, {status: true, deleted: `${deletedC.deletedCount} records deleted.`});
     })
 }
 
