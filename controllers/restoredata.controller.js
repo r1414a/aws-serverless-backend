@@ -14,7 +14,7 @@ class RestoreDataController{
 
     setRestoreData = asyncHandler(async (req,res) => {
         const {deleteData} = req.body;
-        console.log(typeof deleteData, deleteData);
+        console.log(req);
         let insertedC,deletedC;
         if(deleteData.length === 0){
             throw new AppError(400, "missing data to restore.")

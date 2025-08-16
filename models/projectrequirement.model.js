@@ -28,6 +28,10 @@ const ProjectReqSchema = new mongoose.Schema({
     protectBusinessIdea: {
         type: Boolean,
         default: false
+    },
+    isSeen: {
+        type: Boolean,
+        default: false
     }
 },{
     timestamps: true

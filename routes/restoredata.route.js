@@ -1,10 +1,12 @@
 import express from 'express';
 const router = express.Router();
 import RestoreDataController from "../controllers/restoredata.controller.js"
+import { parseRequestBody } from '../middlewares/parseRequestBody.middleware.js';
+
 
 router.route('/get-restore-data').get(RestoreDataController.getRestoreData);
 router.route('/restore-to-main').post(
-    // parseRequestBody,
+    parseRequestBody,
     RestoreDataController.setRestoreData
 )
 

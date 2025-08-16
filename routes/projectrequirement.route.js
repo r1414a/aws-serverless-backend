@@ -8,15 +8,16 @@ import { parseRequestBody } from '../middlewares/parseRequestBody.middleware.js'
 
 
 router.route('/save-form-details').post(
-    // parseRequestBody,
+    parseRequestBody,
     validateProjectRequirement,
     validateRequest,
     ProjectRequirementController.createProjectRequirement)
 router.route('/get-proj-req').get(ProjectRequirementController.getProjectRequirement);
 router.route('/search-proj-req').get(ProjectRequirementController.searchProjectRequirement);
 router.route('/delete-proj-req').post(
-    // parseRequestBody,
+    parseRequestBody,
     ProjectRequirementController.deleteProjectRequirement
 )
+router.route('/new-leads').get(ProjectRequirementController.getLeadsWithNoSeen)
 
 export default router;

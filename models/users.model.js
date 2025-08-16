@@ -11,10 +11,17 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        unique: true,
         trim: true,
         lowercase: true,
         required: true
+    },
+    connectionID: {
+        type: String,
+        default: null
+    },
+    connectedAT: {
+        type: Date,
+        default: null
     }
 },{
     timestamps: true

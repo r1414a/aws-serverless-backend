@@ -1,0 +1,188 @@
+with no websocket request
+
+this is event:  {
+  resource: '/{proxy+}',
+  path: '/api/project-requirement/get-proj-req',
+  httpMethod: 'GET',
+  headers: {
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8',
+    'cache-control': 'max-age=0',
+    Host: 'sidwtphttc.execute-api.ap-south-1.amazonaws.com',
+    priority: 'u=0, i',
+    'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+    'X-Amzn-Trace-Id': 'Root=1-6895aa04-0d6c41d56a274afe3d97ed16',
+    'X-Forwarded-For': '152.58.33.1',
+    'X-Forwarded-Port': '443',
+    'X-Forwarded-Proto': 'https'
+  },
+  multiValueHeaders: {
+    accept: [
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    ],
+    'accept-encoding': [ 'gzip, deflate, br, zstd' ],
+    'accept-language': [ 'en-IN,en-US;q=0.9,en;q=0.8' ],
+    'cache-control': [ 'max-age=0' ],
+    Host: [ 'sidwtphttc.execute-api.ap-south-1.amazonaws.com' ],
+    priority: [ 'u=0, i' ],
+    'sec-ch-ua': [
+      '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"'
+    ],
+    'sec-ch-ua-mobile': [ '?0' ],
+    'sec-ch-ua-platform': [ '"Windows"' ],
+    'sec-fetch-dest': [ 'document' ],
+    'sec-fetch-mode': [ 'navigate' ],
+    'sec-fetch-site': [ 'none' ],
+    'sec-fetch-user': [ '?1' ],
+    'upgrade-insecure-requests': [ '1' ],
+    'User-Agent': [
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+    ],
+    'X-Amzn-Trace-Id': [ 'Root=1-6895aa04-0d6c41d56a274afe3d97ed16' ],
+    'X-Forwarded-For': [ '152.58.33.1' ],
+    'X-Forwarded-Port': [ '443' ],
+    'X-Forwarded-Proto': [ 'https' ]
+  },
+  queryStringParameters: { tab: 'Home' },
+  multiValueQueryStringParameters: { tab: [ 'Home' ] },
+  pathParameters: { proxy: 'api/project-requirement/get-proj-req' },
+  stageVariables: null,
+  requestContext: {
+    resourceId: 'suub1d',
+    resourcePath: '/{proxy+}',
+    httpMethod: 'GET',
+    extendedRequestId: 'O-eAuGa4BcwEc7A=',
+    requestTime: '08/Aug/2025:07:40:52 +0000',
+    path: '/dev/api/project-requirement/get-proj-req',
+    accountId: '826754917477',
+    protocol: 'HTTP/1.1',
+    stage: 'dev',
+    domainPrefix: 'sidwtphttc',
+    requestTimeEpoch: 1754638852204,
+    requestId: '19b3219a-1ab8-4d59-bfed-b5e04644274c',
+    identity: {
+      cognitoIdentityPoolId: null,
+      accountId: null,
+      cognitoIdentityId: null,
+      caller: null,
+      sourceIp: '152.58.33.1',
+      principalOrgId: null,
+      accessKey: null,
+      cognitoAuthenticationType: null,
+      cognitoAuthenticationProvider: null,
+      userArn: null,
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+      user: null
+    },
+    domainName: 'sidwtphttc.execute-api.ap-south-1.amazonaws.com',
+    deploymentId: '7e8r0v',
+    apiId: 'sidwtphttc'
+  },
+  body: null,
+  isBase64Encoded: false
+}
+
+
+this is context:  {
+  callbackWaitsForEmptyEventLoop: [Getter/Setter],
+  succeed: [Function (anonymous)],
+  fail: [Function (anonymous)],
+  done: [Function (anonymous)],
+  functionVersion: '$LATEST',
+  functionName: 'techinovativ-test',
+  memoryLimitInMB: '128',
+  logGroupName: '/aws/lambda/techinovativ-test',
+  logStreamName: '2025/08/08/[$LATEST]0afa9cf349ac4addad9723fe918d0068',
+  clientContext: undefined,
+  identity: undefined,
+  invokedFunctionArn: 'arn:aws:lambda:ap-south-1:826754917477:function:techinovativ-test',
+  awsRequestId: 'd14d075b-ad0b-4a5b-9a42-b37ed6ef9362',
+  tenantId: undefined,
+  getRemainingTimeInMillis: [Function: getRemainingTimeInMillis]
+}
+
+
+with websocket request
+
+this is event:  {
+  headers: {
+    'Accept-Encoding': 'gzip, deflate, br, zstd',
+    'Accept-Language': 'en-IN,en-US;q=0.9,en;q=0.8',
+    'Cache-Control': 'no-cache',
+    Host: 'u21dsgtgv8.execute-api.ap-south-1.amazonaws.com',
+    Origin: 'http://localhost:5173',
+    Pragma: 'no-cache',
+    'Sec-WebSocket-Extensions': 'permessage-deflate; client_max_window_bits',
+    'Sec-WebSocket-Key': 'qHW2GbsGjvKWZ9y2EtJn2Q==',
+    'Sec-WebSocket-Version': '13',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+    'X-Amzn-Trace-Id': 'Root=1-6895b015-3a2b87dd1c4ede871e044d01',
+    'X-Forwarded-For': '152.58.33.1',
+    'X-Forwarded-Port': '443',
+    'X-Forwarded-Proto': 'https'
+  },
+  multiValueHeaders: {
+    'Accept-Encoding': [ 'gzip, deflate, br, zstd' ],
+    'Accept-Language': [ 'en-IN,en-US;q=0.9,en;q=0.8' ],
+    'Cache-Control': [ 'no-cache' ],
+    Host: [ 'u21dsgtgv8.execute-api.ap-south-1.amazonaws.com' ],
+    Origin: [ 'http://localhost:5173' ],
+    Pragma: [ 'no-cache' ],
+    'Sec-WebSocket-Extensions': [ 'permessage-deflate; client_max_window_bits' ],
+    'Sec-WebSocket-Key': [ 'qHW2GbsGjvKWZ9y2EtJn2Q==' ],
+    'Sec-WebSocket-Version': [ '13' ],
+    'User-Agent': [
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+    ],
+    'X-Amzn-Trace-Id': [ 'Root=1-6895b015-3a2b87dd1c4ede871e044d01' ],
+    'X-Forwarded-For': [ '152.58.33.1' ],
+    'X-Forwarded-Port': [ '443' ],
+    'X-Forwarded-Proto': [ 'https' ]
+  },
+  requestContext: {
+    routeKey: '$connect',
+    eventType: 'CONNECT',
+    extendedRequestId: 'O-hzZFitBcwESZw=',
+    requestTime: '08/Aug/2025:08:06:45 +0000',
+    messageDirection: 'IN',
+    stage: 'dev',
+    connectedAt: 1754640405395,
+    requestTimeEpoch: 1754640405395,
+    identity: {
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+      sourceIp: '152.58.33.1'
+    },
+    requestId: 'O-hzZFitBcwESZw=',
+    domainName: 'u21dsgtgv8.execute-api.ap-south-1.amazonaws.com',
+    connectionId: 'O-hzZfPPhcwCHUw=',
+    apiId: 'u21dsgtgv8'
+  },
+  isBase64Encoded: false
+}
+
+this is context:  {
+  callbackWaitsForEmptyEventLoop: [Getter/Setter],
+  succeed: [Function (anonymous)],
+  fail: [Function (anonymous)],
+  done: [Function (anonymous)],
+  functionVersion: '$LATEST',
+  functionName: 'techinovativ-test',
+  memoryLimitInMB: '128',
+  logGroupName: '/aws/lambda/techinovativ-test',
+  logStreamName: '2025/08/07/[$LATEST]5a08a3e2aacc4cbbbb95e78fe100be1f',
+  clientContext: undefined,
+  identity: undefined,
+  invokedFunctionArn: 'arn:aws:lambda:ap-south-1:826754917477:function:techinovativ-test',
+  awsRequestId: '7b6aba93-d493-49b4-a621-c86a2e503994',
+  tenantId: undefined,
+  getRemainingTimeInMillis: [Function: getRemainingTimeInMillis]
+}

@@ -34,7 +34,8 @@ class Authentication{
             httpOnly: true,
             secure: true,
             sameSite: 'None',
-            maxAge: 4 * 24 * 60 * 60 * 1000
+            maxAge: 4 * 24 * 60 * 60 * 1000,
+            domain: 'sidwtphttc.execute-api.ap-south-1.amazonaws.com'
         })
 
         sendResponse(res,200, {status: true}, "Login successfull!.")
